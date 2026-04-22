@@ -1,2 +1,2 @@
-public class Expendedor {
+class Expendedor {
 }
