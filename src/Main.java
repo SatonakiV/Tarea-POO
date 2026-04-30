@@ -44,7 +44,7 @@ public class Main {
         // CASO 4: Pago incorrecto (Moneda null)
         System.out.println("\n[Test 4]: Forzando PagoIncorrectoException");
         try {
-            Comprador c = new Comprador(null, Precios.Snickers, exp);
+            Comprador c = new Comprador(null, Precios.Snickers, exp); 
         } catch (PagoIncorrectoException e) {
             System.out.println("Éxito: Se capturó PagoIncorrectoException -> " + e.getMessage());
         } catch (Exception e) {
@@ -61,7 +61,6 @@ public class Main {
         System.out.println("Antes de ordenar:");
         for (Moneda m : bolsaDeMonedas) System.out.println(m.toString());
 
-        // *** Esto requiere que la clase Moneda implemente Comparable ***
         Collections.sort(bolsaDeMonedas);
 
         System.out.println("\nDespués de ordenar (menor a mayor):");

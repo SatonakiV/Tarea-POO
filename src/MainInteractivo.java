@@ -11,11 +11,16 @@ public class MainInteractivo {
 
         while (continuar) {
             System.out.println("\n--- Menú de Productos ---");
-            System.out.println("1. Coca Cola");
-            System.out.println("2. Sprite");
-            System.out.println("3. Fanta");
-            System.out.println("4. Snickers");
-            System.out.println("5. Super 8");
+            System.out.println("1. CocaCola ($1500)");
+            System.out.println("2. Fanta ($1200)");
+            System.out.println("3. Sprite ($1200)");
+            System.out.println("4. Pepsi ($1500)");
+            System.out.println("5. Kem ($1000)");
+            System.out.println("6. Snickers ($800)");
+            System.out.println("7. Super8 ($300)");
+            System.out.println("8. Kitkat ($800)");
+            System.out.println("9. Chicle ($200)");
+            System.out.println("10. Chocman ($600)");
             System.out.println("0. Salir");
             System.out.print("Seleccione una opción: ");
 
@@ -26,15 +31,22 @@ public class MainInteractivo {
                 System.out.println("¡Gracias por su compra!");
                 continue;
             }
-            
+
             Precios tipoSeleccionado = null;
             switch (opcionProducto) {
                 case 1: tipoSeleccionado = Precios.CocaCola; break;
-                case 2: tipoSeleccionado = Precios.Sprite; break;
-                case 3: tipoSeleccionado = Precios.Fanta; break;
-                case 4: tipoSeleccionado = Precios.Snickers; break;
-                case 5: tipoSeleccionado = Precios.Super8; break;
-                default: System.out.println("Opción inválida."); continue;
+                case 2: tipoSeleccionado = Precios.Fanta; break;
+                case 3: tipoSeleccionado = Precios.Sprite; break;
+                case 4: tipoSeleccionado = Precios.Pepsi; break;
+                case 5: tipoSeleccionado = Precios.Kem; break;
+                case 6: tipoSeleccionado = Precios.Snickers; break;
+                case 7: tipoSeleccionado = Precios.Super8; break;
+                case 8: tipoSeleccionado = Precios.Kitkat; break;
+                case 9: tipoSeleccionado = Precios.Chicle; break;
+                case 10: tipoSeleccionado = Precios.Chocman; break;
+                default:
+                    System.out.println("Opción inválida. Intente nuevamente.");
+                    continue;
             }
 
             System.out.println("\n--- Pago ---");
@@ -52,7 +64,9 @@ public class MainInteractivo {
                 case 2: monedaPago = new Moneda500(); break;
                 case 3: monedaPago = new Moneda1000(); break;
                 case 4: monedaPago = null; break;
-                default: System.out.println("Pago inválido."); continue;
+                default:
+                    System.out.println("Pago inválido. Intente nuevamente.");
+                    continue;
             }
 
             // Bloque donde el Main atrapa las excepciones lanzadas por el Comprador/Expendedor
