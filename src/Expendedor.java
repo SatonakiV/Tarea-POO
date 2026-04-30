@@ -1,4 +1,4 @@
-class Expendedor {
+public class Expendedor {
 
 
     //Inicializa cada uno de los depositos de cada tipo de producto para evitar problemas
