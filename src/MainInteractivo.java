@@ -1,6 +1,20 @@
 import java.util.Scanner;
 
+/**
+ * Interfaz de usuario por consola para el sistema de la Máquina Expendedora.
+ * Permite a un usuario realizar múltiples compras a través de un menú interactivo,
+ * seleccionando productos y métodos de pago de forma dinámica.
+ */
 public class MainInteractivo {
+
+    /**
+     * Método principal que inicia el bucle del menú interactivo.
+     * Despliega las opciones de productos y pagos, lee la entrada del usuario mediante Scanner,
+     * intenta ejecutar la transacción creando un Comprador y gestiona las excepciones
+     * en caso de fallos (pago insuficiente, falta de stock, etc.) para mantener el programa en ejecución.
+     *
+     * @param args Argumentos de la línea de comandos (no se utilizan en esta aplicación).
+     */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         // Creamos el expendedor con 10 unidades de cada producto inicialmente
