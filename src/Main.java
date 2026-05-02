@@ -1,7 +1,21 @@
 import java.util.ArrayList;
 import java.util.Collections;
 
+/**
+ * Clase principal de pruebas para el sistema de la Máquina Expendedora.
+ * Su propósito es demostrar el correcto funcionamiento de las transacciones,
+ * el manejo de las excepciones personalizadas y el ordenamiento de monedas.
+ */
+
 public class Main {
+    /**
+     * Método principal que ejecuta los escenarios de prueba del sistema.
+     * Realiza pruebas de compras exitosas, fuerza errores para capturar excepciones
+     * (PagoInsuficiente, NoHayProducto, PagoIncorrecto) y demuestra el uso
+     * de la interfaz Comparable para ordenar una lista de monedas.
+     *
+     * @param args Argumentos de la línea de comandos (no se utilizan en esta aplicación).
+     */
     public static void main(String[] args) {
         // 1. Crear el expendedor con 1 unidad de cada producto para probar stock
         Expendedor exp = new Expendedor(1);
