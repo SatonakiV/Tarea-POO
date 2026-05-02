@@ -1,4 +1,4 @@
-public abstract class Moneda {
+public abstract class Moneda implements Comparable<Moneda> {
 
     public Moneda() {
     }
@@ -7,5 +7,10 @@ public abstract class Moneda {
 
     public String getSerie() {
         return this.toString();
+    }
+
+    @Override
+    public int compareTo(Moneda m) {
+        return Integer.compare(this.getValor(), m.getValor());
     }
 }
