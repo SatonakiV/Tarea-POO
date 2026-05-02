@@ -25,10 +25,10 @@ public class MainInteractivo {
 
         while (continuar) {
             System.out.println("\n--- Menú de Productos ---");
-            System.out.println("1. CocaCola ($1500)");
-            System.out.println("2. Fanta ($1200)");
-            System.out.println("3. Sprite ($1200)");
-            System.out.println("4. Pepsi ($1500)");
+            System.out.println("1. CocaCola ($1000)");
+            System.out.println("2. Fanta ($1000)");
+            System.out.println("3. Sprite ($1000)");
+            System.out.println("4. Pepsi ($1000)");
             System.out.println("5. Kem ($1000)");
             System.out.println("6. Snickers ($800)");
             System.out.println("7. Super8 ($300)");

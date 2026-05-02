@@ -1,9 +1,9 @@
 public enum Precios {
 
-    CocaCola(1500),
-    Fanta(1200),
-    Sprite(1200),
-    Pepsi(1500),
+    CocaCola(1000),
+    Fanta(1000),
+    Sprite(1000),
+    Pepsi(1000),
     Kem(1000),
     Snickers(800),
     Super8(300),
