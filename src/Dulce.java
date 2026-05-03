@@ -69,7 +69,6 @@ class Chicle extends Dulce {
      * @return El nombre del dulce consumido ("Chicle").
      */
     @Override
-    @Override
     public String Consumir() {
         return "Chicle";
     }
