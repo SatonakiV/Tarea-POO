@@ -11,12 +11,14 @@ public abstract class Moneda implements Comparable<Moneda> {
 
     public Moneda() {
     }
+
     /**
      * Obtiene el valor numérico de esta moneda.
      *
      * @return El valor de la moneda en formato entero.
      */
     public abstract int getValor();
+
     /**
      * Obtiene un identificador único para la moneda
      * como en la vida real cada moneda es distinta, usamos su espacio en la memoria (ToString)
@@ -31,7 +33,7 @@ public abstract class Moneda implements Comparable<Moneda> {
     /**
      * Compara el valor de esta moneda con el de otra que le pasemos.
      * Así la máquina o el comprador puede saber fácilmente cuál vale más.
-     * 
+     *
      * @param m la moneda con la que queremos comparar.
      * @return Un numero negativo si esta vale menos, 0 si valen lo mismo, o positivo si vale más.
      */
