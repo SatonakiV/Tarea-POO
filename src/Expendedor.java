@@ -1,3 +1,8 @@
+/**
+ * Representa la máquina expendedora de productos.
+ * Gestiona el almacenamiento interno de bebidas y dulces en sus respectivos depósitos,
+ * así como el depósito para almacenar y entregar el vuelto de las transacciones.
+ */
 public class Expendedor {
 
 
@@ -14,7 +19,12 @@ public class Expendedor {
     private Deposito<Producto> depositoChocman;
     private Deposito<Moneda> depositoVuelto;
 
-    //Constructor que crea x cantidad de cada uno de los productos de acuerdo petición del usuario
+    /**
+     * Constructor que inicializa todos los depósitos de la máquina expendedora
+     * y los llena con una cantidad específica inicial de cada producto.
+     *
+     * @param cantidad La cantidad de unidades de cada producto con la que se rellenará la máquina.
+     */
     public Expendedor(int cantidad) {
         this.depositoCoca = new Deposito<>();
         this.depositoSprite = new Deposito<>();
@@ -44,7 +54,18 @@ public class Expendedor {
         }
     }
 
-    //Metodo de compra
+    /**
+     * Intenta realizar la compra de un producto en la máquina expendedora.
+     * Verifica que la moneda sea válida, que el pago sea suficiente y que exista stock.
+     * Si la compra es exitosa, calcula el vuelto en monedas de 100 y lo almacena en el depósito de vuelto.
+     *
+     * @param m            La moneda ingresada por el comprador para pagar.
+     * @param tipoProducto El producto específico que se desea comprar (del enum Precios).
+     * @return El objeto Producto que fue extraído exitosamente del depósito correspondiente.
+     * @throws PagoIncorrectoException Si la moneda ingresada es nula.
+     * @throws PagoInsuficienteException Si el valor de la moneda es menor al precio del producto solicitado.
+     * @throws NoHayProductoException Si el depósito del producto solicitado está vacío o el producto no existe.
+     */
     public Producto comprarProducto(Moneda m, Precios tipoProducto) throws PagoIncorrectoException, PagoInsuficienteException, NoHayProductoException{
         Producto p = null; //Varible para comprobar si el producto es valido luego
 
@@ -92,7 +113,13 @@ public class Expendedor {
     }
 
 
-    //Metodo para devolver el dinero
+    /**
+     * Extrae una moneda del depósito de vuelto de la máquina.
+     * Este método debe llamarse repetidamente por el comprador para retirar todo su dinero acumulado.
+     *
+     * @return Una instancia de Moneda (ya sea una moneda de vuelto o la moneda original rechazada),
+     *         o null si el depósito de vuelto ya se encuentra vacío.
+     */
     public Moneda getVuelto() {
         return depositoVuelto.getElemento();
     }
