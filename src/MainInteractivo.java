@@ -5,6 +5,7 @@ import java.util.Scanner;
  * Permite a un usuario realizar múltiples compras a través de un menú interactivo,
  * seleccionando productos y métodos de pago de forma dinámica.
  */
+
 public class MainInteractivo {
 
     /**
